@@ -28,6 +28,7 @@ midpointX = (x1+x2)/2 # The midpoint of the item and user as two vairables
 midpointY = (y1+y2)/2
 dist = math.sqrt((x2-x1)**2 + (y2-y1)**2) #Distance between User and item
 
+#git test
 
 
 
