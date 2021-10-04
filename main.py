@@ -1,6 +1,6 @@
 import csv
 import math
-#setting up Variables
+#SETUP
 complete = bool(0)
 itemfound = bool(0)
 contact = bool(0)
@@ -28,12 +28,45 @@ yint = y1 - grad*x1 # The Y intercept of the line might not need
 midpointX = (x1+x2)/2 # The midpoint of the item and user as two vairables
 midpointY = (y1+y2)/2
 dist = math.sqrt((x2-x1)**2 + (y2-y1)**2) #Distance between User and item
-
+# Defining All funtions
+def checkColisons():
+    if 7>(1 * grad + yint) > 1:
+        contact = bool(1)
+    elif 7>(3 * grad + yint) > 1:
+        contact = bool(1)
+    elif 7>(4 * grad + yint) > 1:
+        contact = bool(1)
+    elif 7>(5 * grad + yint) > 1:
+        contact = bool(1)
+    elif 7>(6 * grad + yint) > 1:
+        contact = bool(1)
+    elif 7>(7 * grad + yint) > 1:
+        contact = bool(1)
+    elif 7>(8 * grad + yint) > 1:
+        contact = bool(1)
+    elif 7>(9 * grad + yint) > 2:
+        contact = bool(1)
+    elif 7>(10 * grad + yint) > 2:
+        contact = bool(1)
+    elif 9>(11 * grad + yint) > 2:
+        contact = bool(1)
+    elif 9>(12 * grad + yint) > 2:
+        contact = bool(1)
+    elif 9>(13 * grad + yint) > 2:
+        contact = bool(1)
+    elif 9>(14 * grad + yint) > 2:
+        contact = bool(1)
+    elif 9>(15 * grad + yint) > 2:
+        contact = bool(1)
+    elif 9>(16 * grad + yint) > 2:
+        contact = bool(1)
+    elif 9>(17 * grad + yint) > 2:
+        contact = bool(1)
 #checking if the line colides with any alises
 while not(complete):
-    if (2>(x1 * grad + yint) > 1):
-        contact = bool(1)
-
+    checkColisons()
+    if contact:
+        midpointX,midpointY
 #for debugging and devolopment
 print("Y Intercept = " + str(yint))
 print("Gradient = " + str(grad))
