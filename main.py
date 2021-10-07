@@ -102,11 +102,18 @@ def findClosestRP():
     r36 = math.sqrt((15.5-midpointX)**2 + (9.5-midpointY)**2)
     r37 = math.sqrt((16.5-midpointX)**2 + (9.5-midpointY)**2)
     r38 = math.sqrt((17.5-midpointX)**2 + (9.5-midpointY)**2)
+    closestrp = "r1"
 #checking if the line colides with any alises
 while not(complete):
     checkColisons()
     if contact:
         findClosestRP()
+        with open('itemData.csv', 'r') as file:
+        for row in file:
+        rowlist = row.split(',')
+        if item == rowlist[0]:
+            print(rowlist[2])
+
 #for debugging and devolopment
 print("Y Intercept = " + str(yint))
 print("Gradient = " + str(grad))
