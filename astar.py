@@ -112,13 +112,7 @@ def main():
             [1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]]
 
     start = (0, 0)
-    end = ((
-        with open('itemData.csv', 'r') as file:
-            for row in file:
-            rowlist = row.split(',')
-                if item == rowlist[0]:
-                    print(rowlist[2])
-           ), 6)
+    end = ((1), 6)
 
     path = astar(maze, start, end)
     print(path)
