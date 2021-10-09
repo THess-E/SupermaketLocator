@@ -67,6 +67,7 @@ def astar(maze, start, end):
 
             # Make sure walkable terrain
             if maze[node_position[0]][node_position[1]] != 0:
+                print
                 continue
 
             # Create new node
@@ -79,6 +80,7 @@ def astar(maze, start, end):
         for child in children:
 
             if len([closedChild for closedChild in closed_list if closedChild == child]) > 0:
+                print("Check 0")
                 continue
 
             # Create the f, g, and h values
@@ -88,7 +90,9 @@ def astar(maze, start, end):
 
             # Child is already in the open list
             if len([openNode for openNode in open_list if child == openNode and child.g > openNode.g]) > 0:
+                print("Check 1")
                 continue
+
 
             # Add the child to the open list
             open_list.append(child)
